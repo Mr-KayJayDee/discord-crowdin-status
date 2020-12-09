@@ -1,0 +1,6 @@
+{
+    "channel": "XXXXXXXXXXXX", // the channel id where you want the status message to be"
+    "editTime": 10000, // the time beetween two message edit (in ms)
+    "purgeOnRestart": true, // wether to purge or not the status channel on restart
+    "purgeAmount": 100 // the amount of messages to purge on start
+}

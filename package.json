@@ -1,0 +1,24 @@
+{
+  "name": "discord-crowdin-status",
+  "version": "1.0.0",
+  "description": "A discord bot allowing you to see the status of your crowdin translations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mr¤KayJayDee <killian.dalcin@gmail.com> (https://github.com/Mr-KayJayDee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-KayJayDee/discord-crowdin-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mr-KayJayDee/discord-crowdin-status/issues"
+  },
+  "homepage": "https://github.com/Mr-KayJayDee/discord-crowdin-status#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "superagent": "^6.1.0"
+  }
+}
