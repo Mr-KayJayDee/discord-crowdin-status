@@ -49,11 +49,19 @@ Put the time you want the bot to check and update with new data. (In millisecond
 
 ### Purge On Restart
 
-Wether you want the bot to purge the status channel on start or not. Put true or false in the ``purgeOnRestart`` key in config.json file.
+Wether you want the bot to purge the status channel on start or not. Put ``true`` or ``false`` in the ``purgeOnRestart`` key in config.json file.
 
 ### Purge Amount
 
 Put the amount of messages you want the bot to purge on restart in the ``purgeAmount`` key in the config.json file.
+
+### Display Link
+
+Wether you want to display the crowdin project link or not. Put ``true`` or ``false`` in the ``displayLink`` key in the config.json file.
+
+### Project Link 
+
+Put the link of your crowdin project (if public) in the ``projectLink`` key in the config.json file.
 
 # TO DO
 

@@ -24,9 +24,11 @@ module.exports = async (bot) => {
 	if (isNaN(amountToPurge) || parseInt(amountToPurge) < 1 || parseInt(amountToPurge) > 100) return console.log(`You need to set a valid amount of messages to purge (beetween 1 and 100) in the configuration file (config.json)`);
 	// If purgeOnRestart is set to true in the config bulkDelete the channel
 	if (bot.config.purgeOnRestart) channel.bulkDelete(amountToPurge);
+	// Display or not the project link
+	let link = bot.config.displayLink ? `\nYou can help translating by following [this](${bot.config.projectLink}) link.` : ``;
 	// Creates a discord MessageEmbed
 	let embed = new Discord.MessageEmbed()
-		.setDescription(`**Status of the languages**`)
+		.setDescription(`**Status of the languages**${link}`)
 		.setFooter(`Last edit ${new Date()}`);
 	// Get the data with the getData() function
 	let data = await getData();
@@ -42,7 +44,7 @@ module.exports = async (bot) => {
 	if (isNaN(bot.config.editTime)) return console.log(`You need to set a valid edit time in the configuration file (config.json)`);
 	setInterval(async () => {
 		let embedEdit = new Discord.MessageEmbed();
-		embedEdit.setDescription(`**Status of the languages**`)
+		embedEdit.setDescription(`**Status of the languages**${link}`)
 			.setFooter(`Last edit ${new Date()}`);
 		let newData = await getData();
 		for (let languages of newData) {
