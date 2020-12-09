@@ -33,7 +33,7 @@ module.exports = async (bot) => {
 	// For every object in the body array add a field to the embed
 	for (let languages of data) {
 		// Field data
-		embed.addField(`${languages.name} (${languages.code})`, `Translated Progress: ${languages.translated_progress}%\nApproved progress: ${languages.approved_progress}%\nPhrases: ${languages.phrases}, Translated: ${languages.translated}, Approved: ${languages.approved}\nWords: ${languages.words}, Translated: ${languages.words_translated}, Approved: ${languages.words_approved}`);
+		embed.addField(`${languages.name} (${languages.code})`, `Translated Progress: ${languages.translated_progress}%\nApproved progress: ${languages.approved_progress}%\nSentences: ${languages.phrases}, Translated: ${languages.translated}, Approved: ${languages.approved}\nWords: ${languages.words}, Translated: ${languages.words_translated}, Approved: ${languages.words_approved}`);
 	}
 	// Send the message
 	let message = await channel.send(embed);
@@ -47,7 +47,7 @@ module.exports = async (bot) => {
 		let newData = await getData();
 		for (let languages of newData) {
 			// Field data
-			embedEdit.addField(`${languages.name} (${languages.code})`, `Translated Progress: ${languages.translated_progress}%\nApproved progress: ${languages.approved_progress}%\nPhrases: ${languages.phrases}, Translated: ${languages.translated}, Approved: ${languages.approved}\nWords: ${languages.words}, Translated: ${languages.words_translated}, Approved: ${languages.words_approved}`);
+			embedEdit.addField(`${languages.name} (${languages.code})`, `Translated Progress: ${languages.translated_progress}%\nApproved progress: ${languages.approved_progress}%\nSentences: ${languages.phrases}, Translated: ${languages.translated}, Approved: ${languages.approved}\nWords: ${languages.words}, Translated: ${languages.words_translated}, Approved: ${languages.words_approved}`);
 		}
 		message.edit(embedEdit);
 	}, bot.config.editTime);

@@ -10,9 +10,9 @@
 - Language code
 - Translated progress
 - Approved progress
-- Phrases count
-- Phrases translated
-- Phrases approved
+- Sentences count
+- Sentences translated
+- Sentences approved
 - Words count
 - Words translated
 - Words approved
